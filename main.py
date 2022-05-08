@@ -31,7 +31,7 @@ class GameSprite(sprite.Sprite):
 class Player(GameSprite):
     def gravity(self):
         if self.rect.y <= 360:
-            self.speedY -= 0.2
+            self.speedY -= 0.4
         else:
             self.speedY = 0
 
@@ -99,12 +99,12 @@ class Enemy(GameSprite):
             self.direction = 'down'
     
 
-spr1 = Player('right_side.png', 0, 100, 10, 70, 80)
+spr1 = Player('right_side.png', 0, 100, 5, 70, 80)
 button_1 = Button(380,250,180,50,(255, 255, 255),(0, 250, 0, 0),'Уровень 2')
 button_2 = Button(180,100,350,50,(255, 255 , 255),(0, 250, 0, 0),'Выберите уровень')
 button_3 = Button(130,250,180,50,(255, 255 , 255),(0, 250, 0, 0),'Уровень 1')
 button_4 = Button(250,350,180,50,(255, 255 , 255),(0, 250, 0, 0),'Уровень 3')
-enemy_one = Enemy(('rocket.png'),200,200,1,35,45)
+enemy_one = Enemy(('enemy.png'),200,200,1,40,40)
 enemy_one.direction = 'left'
 
 game = True
